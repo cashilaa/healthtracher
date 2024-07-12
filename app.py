@@ -19,11 +19,6 @@ model = genai.GenerativeModel('gemini-pro')
 health_data = []
 health_goals = []  # Initialize as an empty list
 
-
-@app.route('/')
-def home():
-    return render_template('home.html')
-
 @app.route('/health_tracker', methods=['GET', 'POST'])
 def health_tracker():
     if request.method == 'POST':
