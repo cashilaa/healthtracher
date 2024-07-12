@@ -81,5 +81,7 @@ def health_game():
     ]
     return render_template('health_game.html', questions=questions)
 
+# If running the app directly with Gunicorn, the `__name__` will be `"__main__"`
 if __name__ == '__main__':
-    app.run(debug=True)
+    # For production, use Gunicorn to serve the app
+    app.run(host='0.0.0.0', port=8000)
