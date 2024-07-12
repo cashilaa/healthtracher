@@ -3,9 +3,7 @@ body {
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    background-image: url("./images/image.jpg"); /* Background image */
-    background-size: cover;
-    background-position: center;
+    background: linear-gradient(90deg, #FFFFFF 0.5%, #87CEFA 99.5%, #FFFFFF 0%); /* Light shade of white background */
     color: #070505; /* Text color */
 }
 
@@ -17,53 +15,56 @@ body {
 }
 
 header {
-    background: rgba(30, 144, 255, 0.8); /* Semi-transparent blue background for header */
-    color: #ffffff;
-    padding-top: 30px;
-    min-height: 70px;
+    background: linear-gradient(90deg, #FFFFFF 0%, #87CEFA 10.5%, #FFFFFF 36.5%); /* Brighter blue */
+    color: #000000; /* Black text color */
+    padding: 10px 20px; /* Reduced padding for a smaller header */
+    min-height: 50px; /* Reduced height for a smaller header */
     border-bottom: #ffffff 3px solid;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    white-space: nowrap; /* Prevent text wrapping */
 }
 
 header a {
-    color: #ffffff;
+    color: #000000; /* Black text color */
     text-decoration: none;
     text-transform: uppercase;
-    font-size: 16px;
+    font-size: 14px; /* Slightly smaller font size */
 }
 
 header ul {
     padding: 0;
     margin: 0;
     list-style: none;
-    overflow: hidden;
+    display: flex;
 }
 
 header li {
-    float: left;
     display: inline;
-    padding: 0 20px 0 20px;
+    padding: 0 10px; /* Reduced padding for more compact layout */
 }
 
 header #branding {
-    float: left;
+    display: flex;
+    align-items: center;
 }
 
 header #branding h1 {
     margin: 0;
+    font-size: 18px; /* Reduced font size for smaller header */
 }
 
 header nav {
-    float: right;
-    margin-top: 10px;
+    display: flex;
+    align-items: center;
 }
 
 header .highlight, header .current a {
-    color: #ffffff;
     font-weight: bold;
 }
 
 header a:hover {
-    color: #ffffff;
     font-weight: bold;
 }
 
@@ -84,7 +85,7 @@ form {
     margin-top: 20px;
 }
 
-input[type="text"], input[type="number"], input[type="date"] {
+input[type="text"], input[type="number"], input[type="date"], input[type="email"] {
     width: 100%;
     padding: 8px;
     margin-bottom: 10px;
